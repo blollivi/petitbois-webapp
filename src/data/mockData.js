@@ -11,7 +11,7 @@ export const siteData = {
       author: "Fabienne et Frédéric"
     },
     images: {
-      hero: "/photos/vue-aerienne-dessin-ai.png",
+      hero: "/photos/vue-aerienne-ai.png",
       presentation: "/photos/vue-aerienne-dessin-ai.png"
     }
   },
