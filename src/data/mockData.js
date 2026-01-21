@@ -9,6 +9,10 @@ export const siteData = {
       title: "Notre histoire",
       text: "Après avoir entièrement rénové notre ancienne maison dans le Poitou, nous nous sommes lancés le défi de tout recommencer, avec un challenge supplémentaire : la création de gîtes charmants et accueillants, au milieu de la belle campagne de la Saintonge Romane.\n\nLe projet de rénovation est lancé fin 2022, les clefs de la maison, étable et granges attenantes, récupérées en mars 2023 et les travaux ont débutés dans la foulée ! Toute la famille a mis la main à la pâte dès qu'elle en a l'occasion.\n\nLe marronnier était déjà existant. Il nous a hébergé au début afin d'effectuer quelques travaux dans notre maison. Une fois ces travaux terminés, nous nous sommes attaqués à L'étable (9 mois de travaux terminés en décembre 2023) puis au Verger (9 mois de travaux terminés en novembre 2024).\n\nAujourd'hui, nous sommes très heureux de pouvoir vous accueillir dans 3 gîtes spacieux et confortables ayant sa propre atmosphère.\n\nAlors, venez nous rendre visite !",
       author: "Fabienne et Frédéric"
+    },
+    images: {
+      hero: "/photos/vue-aerienne-dessin-ai.png",
+      presentation: "/photos/vue-aerienne-dessin-ai.png"
     }
   },
   gites: [

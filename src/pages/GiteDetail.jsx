@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { siteData } from '../data/mockData';
+import { getAssetUrl } from '../utils/assets';
 import { ArrowLeft, Users, Tag, Check } from 'lucide-react';
 import Gallery from '../components/Gallery';
 
@@ -22,7 +23,7 @@ const GiteDetail = () => {
       {/* Header Banner */}
       <div className="relative h-[50vh] w-full overflow-hidden">
         <img 
-          src={gite.image} 
+          src={getAssetUrl(gite.image)} 
           alt={gite.nom} 
           className="w-full h-full object-cover"
         />

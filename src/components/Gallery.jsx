@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assets';
 
 // Vite-specific glob import to collect all images from the public/photos folder
 // Note: We use eager: true to get the values immediately
@@ -20,7 +21,7 @@ const Gallery = ({ folder, images: propImages }) => {
         // Convert the filesystem path to a public URL path
         // From: ../../public/photos/l-etable/img1.jpg 
         // To:   /photos/l-etable/img1.jpg
-        return path.replace('../../public', '');
+        return getAssetUrl(path.replace('../../public', ''));
       });
     
     galleryImages = [...galleryImages, ...matchedImages];
