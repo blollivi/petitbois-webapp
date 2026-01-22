@@ -8,15 +8,15 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1a2e1a", // Deeper forest green
-          light: "#2d4a2d",
-          dark: "#0f1a0f",
+          DEFAULT: "#4F5872", // New Slate Blue
+          light: "#636e8e",   // Lighter variant
+          dark: "#3a4155",    // Darker variant
         },
-        secondary: "#fdfcfb", // Warmer off-white
+        secondary: "#f4f1ec", // New Warm Cream
         accent: {
-          DEFAULT: "#b45309",
-          light: "#d97706",
-          dark: "#92400e",
+          DEFAULT: "#d3b094", // New Sand/Tan
+          light: "#e0c8b0",   // Lighter variant
+          dark: "#b89070",    // Darker variant
         },
         stone: {
           50: '#fafaf9',

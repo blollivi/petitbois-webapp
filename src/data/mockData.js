@@ -1,8 +1,9 @@
 export const siteData = {
   general: {
     title: "Domaine du Petit Bois",
-    address: "123 Route de la Forêt, 44000 Nantes, France",
-    phone: "+33 6 00 00 00 00",
+    address: "108 Rue du Couraud, 17460 Varzay",
+    phone: "+33 6 78 84 30 70",
+    email: "domainedupetitbois@orange.fr",
     introText: "Le Domaine du Petit Bois, c'est 3 gîtes meublés de tourisme tout confort, classés 3 étoiles et 3 épis Gîtes De France. Chaque gîte a sa propre personnalité.",
     fullDescription: "Idéalement niché au cœur de la Saintonge Romane, sur l'axe Saintes-Royan, vous résiderez d'un lieu paisible au milieu de la nature tout en étant proche de toutes les commodités.\n\nLa Saintonge Romane, c'est un patrimoine historique et préhistorique riche, ce sont des villages pittoresques avec chacun des trésors d'architecture et des ruelles fleuries, la vigne du Cognac. C'est aussi la proximité de la côte Atlantique avec ses plages et ses iles.\n\nSaintes est à 10 mn, Royan à 20mn, L'ile d'Oléron à 35mn, La Rochelle à 50mn et l'ile de Ré à 1H.\n\nL' autoroute A10 est à 10mn.\n\nN'hésitez pas à découvrir nos 3 gîtes et choisissez celui qui vous attire.\n\nNous serons ravis de vous accueillir pour un séjour à la campagne, en Charente-Maritime !",
     history: {
@@ -11,8 +12,9 @@ export const siteData = {
       author: "Fabienne et Frédéric"
     },
     images: {
-      hero: "/photos/vue-aerienne-ai.png",
-      presentation: "/photos/vue-aerienne-dessin-ai.png"
+      hero: "/photos/vue-aerienne-dessin-ai.png",
+      presentation: "/photos/vue-aerienne-ai.png",
+      logo: "/photos/Logo-light.png"
     }
   },
   gites: [

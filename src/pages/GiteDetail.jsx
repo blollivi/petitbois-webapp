@@ -4,9 +4,11 @@ import { siteData } from '../data/mockData';
 import { getAssetUrl } from '../utils/assets';
 import { ArrowLeft, Users, Tag, Check } from 'lucide-react';
 import Gallery from '../components/Gallery';
+import { useModal } from '../context/ModalContext';
 
 const GiteDetail = () => {
   const { slug } = useParams();
+  const { openModal } = useModal();
   const gite = siteData.gites.find((g) => g.slug === slug);
 
   if (!gite) {
@@ -73,7 +75,10 @@ const GiteDetail = () => {
                 </div>
               </div>
 
-              <button className="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-emerald-800 transition-colors shadow-lg">
+              <button 
+                onClick={openModal}
+                className="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-emerald-800 transition-colors shadow-lg"
+              >
                 Réserver mon séjour
               </button>
               

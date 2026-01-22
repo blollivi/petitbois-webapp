@@ -33,6 +33,11 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl animate-fade-in">
+          <img 
+            src={getAssetUrl(siteData.general.images.logo)} 
+            alt="Logo Domaine" 
+            className="h-24 md:h-32 w-auto mx-auto mb-6 drop-shadow-lg animate-fade-in"
+          />
           <span className="inline-block text-accent-light font-semibold tracking-widest uppercase mb-4 text-sm animate-slide-up">Bienvenue au</span>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 font-serif text-white drop-shadow-2xl animate-slide-up [animation-delay:200ms]">
             {siteData.general.title}
