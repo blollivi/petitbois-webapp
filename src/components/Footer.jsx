@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/mockData';
 import { Mail, Phone, MapPin, Facebook, Instagram, Heart, Star } from 'lucide-react';
+import { useModal } from '../context/ModalContext';
 
 const Footer = () => {
+  const { openModal } = useModal();
   return (
     <footer className="bg-primary-dark text-stone-300 py-20 border-t border-white/5">
       <div className="container mx-auto px-4">
@@ -31,7 +33,14 @@ const Footer = () => {
               <li><Link to="/" className="hover:text-accent transition-colors">Accueil</Link></li>
               <li><a href="#gites" className="hover:text-accent transition-colors">Nos Gîtes</a></li>
               <li><a href="#presentation" className="hover:text-accent transition-colors">Présentation</a></li>
-              <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+              <li>
+                <button
+                  onClick={openModal}
+                  className="hover:text-accent transition-colors text-left"
+                >
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
 

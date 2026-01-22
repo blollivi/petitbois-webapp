@@ -26,33 +26,33 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-primary/90 backdrop-blur-md py-4 shadow-lg border-b border-white/10'
-        : 'bg-transparent py-6'
+      ? 'bg-primary/90 backdrop-blur-md py-4 shadow-lg border-b border-white/10'
+      : 'bg-transparent py-6'
       }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           onClick={handleAccueilClick}
           className="flex items-center text-2xl md:text-3xl font-bold font-serif tracking-tight text-white group"
         >
-          <img 
-            src={getAssetUrl(siteData.general.images.logo)} 
-            alt="Logo Petit Bois" 
+          <img
+            src={getAssetUrl(siteData.general.images.logo)}
+            alt="Logo Petit Bois"
             className="h-10 w-auto mr-3"
           />
           <span className="italic text-accent group-hover:text-accent-light transition-colors">Domaine</span> du Petit Bois
         </Link>
         <div className="hidden md:flex items-center space-x-10">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             onClick={handleAccueilClick}
             className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors"
           >
             Accueil
           </Link>
-          <a href="/#gites" className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors">Nos Gîtes</a>
-          <a href="/#presentation" className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors">Le Domaine</a>
-          <button 
+          <a href="#gites" className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors">Nos Gîtes</a>
+          <a href="#presentation" className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors">Le Domaine</a>
+          <button
             onClick={openModal}
             className="bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full font-sans uppercase text-xs tracking-[0.2em] font-bold transition-all shadow-lg hover:shadow-accent/40"
           >
