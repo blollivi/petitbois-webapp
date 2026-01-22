@@ -1,5 +1,6 @@
 import React from 'react';
 import { getAssetUrl } from '../utils/assets';
+import { usePhotoCarousel } from '../context/PhotoCarouselContext';
 
 // Vite-specific glob import to collect all images from the public/photos folder
 // Note: We use eager: true to get the values immediately
@@ -9,6 +10,7 @@ const allImages = import.meta.glob('../../public/photos/**/*.{png,jpg,jpeg,svg,w
 });
 
 const Gallery = ({ folder, images: propImages }) => {
+  const { openCarousel } = usePhotoCarousel();
   // Use images from props if provided, otherwise filter from the glob
   let galleryImages = propImages || [];
 
@@ -49,6 +51,10 @@ const Gallery = ({ folder, images: propImages }) => {
     return null;
   }
 
+  const handleImageClick = (index) => {
+    openCarousel(galleryImages, index);
+  };
+
   return (
     <section>
       <h2 className="text-2xl font-serif text-stone-800 mb-6">Galerie Photos</h2>
@@ -60,6 +66,7 @@ const Gallery = ({ folder, images: propImages }) => {
             alt={`Galerie ${index + 1}`}
             className="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity cursor-zoom-in"
             loading="lazy"
+            onClick={() => handleImageClick(index)}
           />
         ))}
       </div>

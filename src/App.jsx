@@ -5,20 +5,23 @@ import Home from './pages/Home';
 import GiteDetail from './pages/GiteDetail';
 import ScrollToTop from './components/ScrollToTop';
 import { ModalProvider } from './context/ModalContext';
+import { PhotoCarouselProvider } from './context/PhotoCarouselContext';
 import './App.css';
 
 function App() {
   return (
     <ModalProvider>
-      <Router basename={import.meta.env.BASE_URL}>
-        <ScrollToTop />
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/gite/:slug" element={<GiteDetail />} />
-          </Routes>
-        </Layout>
-      </Router>
+      <PhotoCarouselProvider>
+        <Router basename={import.meta.env.BASE_URL}>
+          <ScrollToTop />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/gite/:slug" element={<GiteDetail />} />
+            </Routes>
+          </Layout>
+        </Router>
+      </PhotoCarouselProvider>
     </ModalProvider>
   );
 }
