@@ -83,7 +83,7 @@ const GiteDetail = () => {
               </button>
               
               <p className="text-center text-stone-400 text-sm mt-4 font-sans">
-                Paiement sécurisé & confirmation immédiate
+                Pour tout renseignement ou réservation
               </p>
             </div>
           </div>

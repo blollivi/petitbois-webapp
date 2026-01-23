@@ -5,7 +5,7 @@ nom: Le Verger
 description_courte: Lumière et volume, maîtres mots du gîte.
 price: 160€ / nuit
 capacity: 6
-image: /photos/le-verger/cuisine.jpg
+image: /photos/le-verger/terrasse.jpg
 amenities:
   - Poêle à pellets
   - Mezzanine

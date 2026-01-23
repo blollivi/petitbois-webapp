@@ -5,7 +5,7 @@ nom: L'étable
 description_courte: Le charme des pierres et du bois dans cette authentique étable.
 price: 130€ / nuit
 capacity: 4
-image: /photos/l-etable/Le séjour.jpg
+image: /photos/l-etable/IMG_6108.jpg
 amenities:
   - Climatisation
   - Prise Green Up
