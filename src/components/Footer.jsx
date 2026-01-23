@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/mockData';
-import { Mail, Phone, MapPin, Facebook, Instagram, Heart, Star } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Heart, Star } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
 
 const Footer = () => {
@@ -17,9 +17,6 @@ const Footer = () => {
               Des gîtes de charme au cœur de la Saintonge pour des moments inoubliables en famille ou entre amis.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-white transition-all">
-                <Facebook className="w-5 h-5" />
-              </a>
               <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-white transition-all">
                 <Instagram className="w-5 h-5" />
               </a>

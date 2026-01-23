@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { siteData } from '../data/mockData';
 import { getAssetUrl } from '../utils/assets';
 import {
@@ -17,6 +17,19 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state && location.state.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <div className="relative">
       <div className="grain-overlay"></div>
@@ -112,7 +125,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-stone-900">Localisation</h4>
-                    <p className="text-sm text-stone-500">Proche Saintes & Royan</p>
+                    <p className="text-sm text-stone-500">Sur l'axe Saintes - Royan</p>
                   </div>
                 </div>
               </div>
@@ -146,7 +159,7 @@ const Home = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Nos Gîtes de Charme</h2>
             <p className="text-stone-600 text-lg">
-              Chaque gîte a été rénové avec passion pour vous offrir une expérience unique mêlant authenticité et modernité.
+              Chaque gîte a été rénové avec passion pour vous offrir une expérience unique mêlant authenticité et modernité, calme et confort.
             </p>
           </div>
 
@@ -159,13 +172,10 @@ const Home = () => {
                     alt={gite.nom}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 right-4 glass-card px-4 py-2 rounded-full text-primary font-bold text-sm">
-                    {gite.price}
-                  </div>
                 </div>
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-primary">{gite.nom}</h3>
+                    <h3 className="text-3xl font-bold text-primary">{gite.nom}</h3>
                     <div className="flex items-center gap-1 text-stone-500 text-sm">
                       <Users className="w-4 h-4" />
                       <span>{gite.capacity} pers.</span>

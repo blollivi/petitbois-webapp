@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/photos"
+public_folder: "/photos"
+
+collections:
+  - name: "gites"
+    label: "Gîtes"
+    folder: "src/content/gites"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ID", name: "id", widget: "number" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Nom", name: "nom", widget: "string" }
+      - { label: "Description courte", name: "description_courte", widget: "string" }
+      - { label: "Prix", name: "price", widget: "string" }
+      - { label: "Capacité", name: "capacity", widget: "number" }
+      - { label: "Image principale", name: "image", widget: "image" }
+      - { label: "Dossier galerie", name: "galleryFolder", widget: "string" }
+      - { label: "Équipements", name: "amenities", widget: "list" }
+      - { label: "Description complète", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Paramètres"
+    files:
+      - label: "Informations générales"
+        name: "general"
+        file: "src/content/general.json"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Adresse", name: "address", widget: "string" }
+          - { label: "Téléphone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Texte d'introduction", name: "introText", widget: "text" }
+          - { label: "Description complète", name: "fullDescription", widget: "markdown" }
+          - label: "Histoire"
+            name: "history"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Texte", name: "text", widget: "markdown" }
+              - { label: "Auteur", name: "author", widget: "string" }
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Image hero", name: "hero", widget: "image" }
+              - { label: "Image présentation", name: "presentation", widget: "image" }
+              - { label: "Logo", name: "logo", widget: "image" }
+
+      - label: "Témoignages"
+        name: "testimonials"
+        file: "src/content/testimonials.json"
+        fields:
+          - label: "Témoignages"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Auteur", name: "author", widget: "string" }
+              - { label: "Texte", name: "text", widget: "text" }

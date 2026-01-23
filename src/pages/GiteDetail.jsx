@@ -30,9 +30,9 @@ const GiteDetail = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-white italic drop-shadow-lg">{gite.nom}</h1>
+          <h1 className="text-6xl md:text-7xl font-serif text-white italic drop-shadow-lg">{gite.nom}</h1>
         </div>
-        <Link to="/" className="absolute top-8 left-8 inline-flex items-center text-white hover:text-accent transition-colors z-20 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
+        <Link to="/" className="absolute top-28 left-8 inline-flex items-center text-white hover:text-accent transition-colors z-20 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
           <ArrowLeft className="mr-2" size={20} />
           Retour
         </Link>
@@ -64,10 +64,6 @@ const GiteDetail = () => {
           {/* Right Column: Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 bg-stone-50 p-6 rounded-lg border border-stone-200">
-              <div className="mb-6">
-                <span className="text-3xl font-serif text-primary font-bold">{gite.price}</span>
-              </div>
-              
               <div className="space-y-4 mb-8">
                 <div className="flex items-center text-stone-700">
                   <Users className="mr-3 text-accent" size={20} />
@@ -79,7 +75,7 @@ const GiteDetail = () => {
                 onClick={openModal}
                 className="w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-emerald-800 transition-colors shadow-lg"
               >
-                Réserver mon séjour
+                Contactez-nous
               </button>
               
               <p className="text-center text-stone-400 text-sm mt-4 font-sans">

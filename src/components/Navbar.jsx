@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { siteData } from '../data/mockData';
 import { getAssetUrl } from '../utils/assets';
 import { useModal } from '../context/ModalContext';
@@ -7,6 +7,7 @@ import { useModal } from '../context/ModalContext';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const { openModal } = useModal();
 
   useEffect(() => {
@@ -21,6 +22,18 @@ const Navbar = () => {
     if (location.pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/', { state: { scrollTo: targetId } });
     }
   };
 
@@ -50,8 +63,20 @@ const Navbar = () => {
           >
             Accueil
           </Link>
-          <a href="#gites" className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors">Nos Gîtes</a>
-          <a href="#presentation" className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors">Le Domaine</a>
+          <a
+            href="#gites"
+            onClick={(e) => handleNavClick(e, 'gites')}
+            className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors"
+          >
+            Nos Gîtes
+          </a>
+          <a
+            href="#presentation"
+            onClick={(e) => handleNavClick(e, 'presentation')}
+            className="font-sans uppercase text-xs tracking-[0.2em] font-bold text-white hover:text-accent transition-colors"
+          >
+            Le Domaine
+          </a>
           <button
             onClick={openModal}
             className="bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full font-sans uppercase text-xs tracking-[0.2em] font-bold transition-all shadow-lg hover:shadow-accent/40"

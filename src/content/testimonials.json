@@ -1,0 +1,14 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "author": "Charlotte, Mérignac",
+      "text": "« Mon compagnon et moi-même avons passé un excellent week-end dans ce logement. Nous n'avons manqué de rien. La cuisine est très bien équipée et la literie de très bonne qualité. De plus, Frédéric est très à l'écoute et à fait en sorte de rendre notre séjour le plus agréable possible. Nous recommandons fortement ce logement où il y fait bon vivre ! »"
+    },
+    {
+      "id": 2,
+      "author": "Guillaume, Eguilles",
+      "text": "« Un logement charmant, aménagé avec beaucoup de goût et très bien équipé. Un environnement très agréable et reposant. Un hôte (Frédéric) accueillant et très prévenant. Je recommande vivement ! »"
+    }
+  ]
+}
