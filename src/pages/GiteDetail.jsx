@@ -32,7 +32,11 @@ const GiteDetail = () => {
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
           <h1 className="text-7xl md:text-8xl font-serif text-white italic drop-shadow-lg">{gite.nom}</h1>
         </div>
-        <Link to="/" className="absolute top-28 left-8 inline-flex items-center text-white hover:text-accent transition-colors z-20 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm">
+        <Link 
+          to="/" 
+          state={{ scrollTo: 'gites' }}
+          className="absolute top-28 left-8 inline-flex items-center text-white hover:text-accent transition-colors z-20 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm"
+        >
           <ArrowLeft className="mr-2" size={20} />
           Retour
         </Link>
