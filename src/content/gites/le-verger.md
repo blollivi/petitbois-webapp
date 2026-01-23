@@ -1,23 +1,27 @@
 ---
 id: 2
-slug: "le-verger"
-nom: "Le Verger"
-description_courte: "Lumière et volume, maîtres mots du gîte."
-price: "160€ / nuit"
+slug: le-verger
+nom: Le Verger
+description_courte: Lumière et volume, maîtres mots du gîte.
+price: 160€ / nuit
 capacity: 6
-image: "/photos/le-verger/cuisine.jpg"
-galleryFolder: "le-verger"
+image: /photos/le-verger/cuisine.jpg
 amenities:
-  - "Poêle à pellets"
-  - "Mezzanine"
-  - "Prise Green Up"
-  - "Climatisation"
-  - "TV"
-  - "Barbecue"
-  - "Parking privé"
-  - "Electroménager haut de gamme"
+  - Poêle à pellets
+  - Mezzanine
+  - Prise Green Up
+  - Climatisation
+  - TV
+  - Barbecue
+  - Parking privé
+  - Electroménager haut de gamme
+gallery:
+  - /photos/le-verger/ch 1 lit - 3.jpg
+  - /photos/le-verger/ch 2 lits.jpg
+  - /photos/le-verger/cuisine.jpg
+  - /photos/le-verger/espace enfant.jpg
+  - /photos/le-verger/terrasse.jpg
 ---
-
 Le Verger est le dernier né du Domaine du Petit Bois. Comme L'étable, sa rénovation aura duré près de 10 mois. Partis de la grange contiguë à L'étable, nous avons profité des immenses volumes du bâtiment pour créer un gîte avec une pièce de vie "cathédrale" à la lumière omniprésente grâce à l'immense baie vitrée donnant sur la terrasse et le jardin privatif et aux nombreuses ouvertures.
 
 La grande pièce de vie de 35m² rassemble la cuisine entièrement équipée et climatisée avec son îlot central, fait maison, en pièce maîtresse et le coin repas avec sa grande table donnant directement sur la terrasse et le jardin privatif. Vous apprécierez aussi le petit coin salon devant le poêle à pellets pour l'hiver.

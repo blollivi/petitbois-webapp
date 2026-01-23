@@ -1,22 +1,26 @@
 ---
 id: 3
-slug: "le-marronnier"
-nom: "Le marronnier"
-description_courte: "Quiétude et nature."
-price: "110€ / nuit"
+slug: le-marronnier
+nom: Le marronnier
+description_courte: Quiétude et nature.
+price: 110€ / nuit
 capacity: 5
-image: "/photos/le-marronnier/salon1.jpg"
-galleryFolder: "le-marronnier"
+image: /photos/le-marronnier/salon1.jpg
 amenities:
-  - "Climatisation"
-  - "Grand Jardin"
-  - "Balançoire"
-  - "Barbecue"
-  - "Cuisine américaine"
-  - "Wifi"
-  - "Parking privé"
+  - Climatisation
+  - Grand Jardin
+  - Balançoire
+  - Barbecue
+  - Cuisine américaine
+  - Wifi
+  - Parking privé
+gallery:
+  - /photos/le-marronnier/ch 1.jpg
+  - /photos/le-marronnier/facade.jpg
+  - /photos/le-marronnier/salon1.jpg
+  - /photos/le-marronnier/sdb.jpg
+  - /photos/le-marronnier/transats.jpg
 ---
-
 Le Marronnier est le troisième gîte du Domaine du Petit Bois.
 
 Indépendant de la bâtisse principale, c'est un logement entier. Comme L'étable et le Verger, ce vaste gîte de 65 m² est entièrement équipé haut de gamme et chaque pièce du gîte est climatisée.

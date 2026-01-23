@@ -86,7 +86,7 @@ const GiteDetail = () => {
         </div>
 
         <div className="mt-12 pt-12 border-t border-stone-100">
-          <Gallery folder={gite.galleryFolder} />
+          <Gallery images={gite.gallery} />
         </div>
       </div>
     </div>

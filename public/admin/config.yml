@@ -19,7 +19,10 @@ collections:
       - { label: "Prix", name: "price", widget: "string" }
       - { label: "Capacité", name: "capacity", widget: "number" }
       - { label: "Image principale", name: "image", widget: "image" }
-      - { label: "Dossier galerie", name: "galleryFolder", widget: "string" }
+      - label: "Galerie Photos"
+        name: "gallery"
+        widget: "list"
+        field: { label: "Photo", name: "image", widget: "image" }
       - { label: "Équipements", name: "amenities", widget: "list" }
       - { label: "Description complète", name: "body", widget: "markdown" }
 
