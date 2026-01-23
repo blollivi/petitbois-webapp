@@ -17,9 +17,16 @@ const Footer = () => {
               Des gîtes de charme au cœur de la Saintonge pour des moments inoubliables en famille ou entre amis.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-white transition-all">
-                <Instagram className="w-5 h-5" />
-              </a>
+              {siteData.general.social?.instagram && (
+                <a 
+                  href={siteData.general.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="p-3 rounded-full bg-white/5 hover:bg-accent hover:text-white transition-all"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+              )}
             </div>
           </div>
 

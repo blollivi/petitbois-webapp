@@ -19,6 +19,18 @@ import {
 const Home = () => {
   const location = useLocation();
 
+  const ICON_MAP = {
+    Trees: Trees,
+    Wind: Wind,
+    Coffee: Coffee,
+    MapPin: MapPin,
+    Wifi: Wifi,
+    Users: Users,
+    Calendar: Calendar,
+    Heart: Heart,
+    Sparkles: Sparkles
+  };
+
   useEffect(() => {
     if (location.state && location.state.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
@@ -92,42 +104,20 @@ const Home = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-6 pt-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-stone-100 rounded-2xl text-primary">
-                    <Trees className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900">Nature</h4>
-                    <p className="text-sm text-stone-500">Parc arboré et calme absolu</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-stone-100 rounded-2xl text-primary">
-                    <Wind className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900">Sérénité</h4>
-                    <p className="text-sm text-stone-500">Loin du tumulte urbain</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-stone-100 rounded-2xl text-primary">
-                    <Coffee className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900">Confort</h4>
-                    <p className="text-sm text-stone-500">Équipements haut de gamme</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-stone-100 rounded-2xl text-primary">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900">Localisation</h4>
-                    <p className="text-sm text-stone-500">Sur l'axe Saintes - Royan</p>
-                  </div>
-                </div>
+                {siteData.general.features?.map((feature, index) => {
+                  const Icon = ICON_MAP[feature.icon];
+                  return (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="p-3 bg-stone-100 rounded-2xl text-primary">
+                        {Icon && <Icon className="w-6 h-6" />}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-stone-900">{feature.title}</h4>
+                        <p className="text-sm text-stone-500">{feature.text}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 

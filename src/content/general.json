@@ -14,5 +14,30 @@
     "hero": "/photos/vue-aerienne-dessin-ai.png",
     "presentation": "/photos/vue-aerienne-ai.png",
     "logo": "/photos/Logo-light.png"
-  }
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/domaine_dupetitbois/"
+  },
+  "features": [
+    {
+      "icon": "Trees",
+      "title": "Nature",
+      "text": "Parc arboré et calme absolu"
+    },
+    {
+      "icon": "Wind",
+      "title": "Sérénité",
+      "text": "Loin du tumulte urbain"
+    },
+    {
+      "icon": "Coffee",
+      "title": "Confort",
+      "text": "Équipements haut de gamme"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Localisation",
+      "text": "Sur l'axe Saintes - Royan"
+    }
+  ]
 }
