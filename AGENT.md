@@ -1,72 +1,88 @@
 @plan
 
 ### Context
-We are implementing a photo gallery for the Gîte Detail page. This involves updating the data model to support multiple images per gîte, creating a reusable Gallery UI component, and integrating it into the detail view.
+We are migrating the application's data source from a hardcoded JavaScript object (`mockData.js`) to a file-based content system (`src/content/`) to enable **Decap CMS**.
 
-**Files to modify:**
-1.  `src/data/mockData.js`
-2.  `src/components/Gallery.jsx` (New File)
-3.  `src/pages/GiteDetail.jsx`
-
----
+We will use **Netlify Identity** for authentication. The `mockData.js` file will be rewritten to act as a "Data Loader" that reads these new files and serves them to the app in the format it expects, ensuring no changes are needed in the React components.
 
 ### Step-by-Step Plan
 
-#### 1. Update Data Model
-We need to add a `gallery` array to each gîte object in the mock data.
+#### 1. Install Dependencies
+We need a library to parse the "Frontmatter" (metadata) from the Markdown files we will use for the Gites.
 
-*   Open `src/data/mockData.js`.
-*   Locate the `gites` array.
-*   For **each** of the 3 gîte objects (`id: 1`, `id: 2`, `id: 3`), add a new property named `gallery`.
-*   Populate this array with 4-6 placeholder image URLs (using `placehold.co` for now to ensure immediate visibility).
-*   **Action:** Add the following structure to each gîte object:
-    ```javascript
-    gallery: [
-      "https://placehold.co/600x400?text=Cuisine",
-      "https://placehold.co/600x400?text=Salon",
-      "https://placehold.co/600x400?text=Chambre",
-      "https://placehold.co/600x400?text=Jardin",
-      "https://placehold.co/600x400?text=Salle+de+bain"
-    ],
-    ```
+*   **Command:** `npm install front-matter`
 
-#### 2. Create Gallery Component
-We will create a responsive grid component to display these images.
+#### 2. Create Content Directory Structure
+Create the following folders to store the data:
+*   `src/content/`
+*   `src/content/gites/`
 
-*   Create a new file: `src/components/Gallery.jsx`.
-*   **Imports:** Import `React`.
-*   **Props:** The component should accept a prop named `images` (an array of strings).
+#### 3. Migrate Data: General Settings
+Extract the `general` object from `mockData.js` into a JSON file.
+
+*   **File:** `src/content/general.json`
+*   **Content:** Create a JSON object containing the `title`, `address`, `phone`, `email`, `introText`, `fullDescription`, `history` object, and `images` object exactly as they appear in `mockData.js`.
+
+#### 4. Migrate Data: Testimonials
+Extract the `testimonials` array into a JSON file.
+
+*   **File:** `src/content/testimonials.json`
+*   **Content:** A JSON object with a key `testimonials` containing the array of testimonial objects (id, author, text).
+
+#### 5. Migrate Data: Gites (Markdown)
+Convert each Gite object into a Markdown file. The properties (id, slug, nom, price, etc.) go into the **Frontmatter** (YAML at the top), and the `description` goes into the **Body**.
+
+*   **File:** `src/content/gites/l-etable.md`
+    *   **Frontmatter:** `id: 1`, `slug: "l-etable"`, `nom`, `description_courte`, `price`, `capacity`, `image`, `galleryFolder`, `amenities` (list).
+    *   **Body:** The full text from the `description` field.
+*   **File:** `src/content/gites/le-verger.md`
+    *   **Frontmatter:** Same structure, data for "Le Verger".
+    *   **Body:** Description text.
+*   **File:** `src/content/gites/le-marronnier.md`
+    *   **Frontmatter:** Same structure, data for "Le Marronnier".
+    *   **Body:** Description text.
+
+#### 6. Implement Data Loader
+Rewrite `mockData.js` to dynamically load the files created above.
+
+*   **File:** `src/data/mockData.js`
+*   **Imports:**
+    *   `attributes` from `front-matter`.
+    *   `generalData` from `../content/general.json`.
+    *   `testimonialsData` from `../content/testimonials.json`.
 *   **Logic:**
-    *   Check if `images` exists and has length > 0. If not, return `null`.
-    *   Render a `section` with a title "Galerie Photos".
-    *   Render a `div` with a CSS Grid layout:
-        *   Mobile: 1 column (`grid-cols-1`)
-        *   Tablet: 2 columns (`md:grid-cols-2`)
-        *   Desktop: 3 columns (`lg:grid-cols-3`)
-        *   Gap: `gap-4`
-    *   Map through the `images` array. For each image:
-        *   Render an `img` tag.
-        *   Classes: `w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity`.
-        *   Add `loading="lazy"` for performance.
-*   **Export:** Default export the component.
+    1.  Use `import.meta.glob('../content/gites/*.md', { eager: true, query: '?raw' })` to load all Gite markdown files as raw strings.
+    2.  Map over the results:
+        *   Pass the raw string to `front-matter` to extract `attributes` (metadata) and `body` (description).
+        *   Return a merged object: `{ ...attributes, description: body }`.
+    3.  Sort the Gites by `id`.
+    4.  Export `siteData` object containing:
+        *   `general`: `generalData`
+        *   `gites`: The processed gites array.
+        *   `testimonials`: `testimonialsData.testimonials`
 
-#### 3. Integrate Gallery into Detail Page
-Now we place the gallery on the detail page.
+#### 7. Setup Decap CMS Admin
+Create the static admin interface.
 
-*   Open `src/pages/GiteDetail.jsx`.
-*   **Import:** Import the new component at the top:
-    ```javascript
-    import Gallery from '../components/Gallery';
-    ```
-*   **Locate Insertion Point:** Find the closing `div` of the main content grid. This is the `div` containing the "Left Column" and "Right Column".
-    *   Look for the closing tag of `<div className="grid grid-cols-1 lg:grid-cols-3 gap-12">`.
-*   **Insert Component:** Immediately **after** that closing `div`, but still inside the white container (`max-w-5xl ... bg-white ...`), insert the `<Gallery />` component.
-*   **Pass Props:** Pass the gîte's gallery data:
-    ```jsx
-    <div className="mt-12 pt-12 border-t border-stone-100">
-      <Gallery images={gite.gallery} />
-    </div>
-    ```
+*   **File:** `public/admin/index.html`
+    *   **Content:** Standard HTML boilerplate for Decap CMS.
+    *   **Scripts:**
+        *   Include the Netlify Identity widget script: `https://identity.netlify.com/v1/netlify-identity-widget.js`.
+        *   Include the Decap CMS script: `https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js`.
 
-#### 4. (Optional) Asset Folder Structure
-*   *Note for user:* To use real photos later, create a folder `public/images/` and update the paths in `src/data/mockData.js` to point to local files (e.g., `/images/kitchen.jpg`) instead of the placeholder URLs.
+*   **File:** `public/admin/config.yml`
+    *   **Backend:** `name: git-gateway`, `branch: main`.
+    *   **Media:** `media_folder: "public/photos"`, `public_folder: "/photos"`.
+    *   **Collections:**
+        1.  **Gites:** Folder `src/content/gites`, create `true`, fields mapping to the Frontmatter + Body (widget: markdown).
+        2.  **Settings:** Files collection for `general.json` and `testimonials.json`.
+
+#### 8. Enable Netlify Identity on Main Site
+The Netlify Identity widget needs to be on the main index page to handle the email redirection loop when a user logs in.
+
+*   **File:** `index.html` (Root)
+*   **Action:** Add the Netlify Identity script tag inside the `<head>`:
+    `<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>`
+
+#### 9. Manual Instructions (Post-Coding)
+*   **Note:** I will provide a reminder that you must create a site on Netlify, link this repo, and enable "Identity" and "Git Gateway" in the Netlify dashboard for this to work.
