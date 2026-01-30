@@ -25,7 +25,7 @@ amenities:
   - Cuisine équipée
   - Parking privé
 ---
-Le gîte L'Étable est le premier des deux gîtes (avec le Verger) que nous avons entièrement créé. Parti de l'étable de la ferme, nous l'avons tout d'abord entièrement vidée pour la rénover avec l'idée d'y faire un vrai cocon douillet en préservant au maximum l'identité du lieu. C'est ainsi que se côtoient la mangeoire en pierre, les vieux pavés, les poutres apparentes ou encore l'escalier que nous avons créé avec de vieilles planches, l'electroménager haut de gamme, et la literie de grande qualité fabriquée en Charente Maritime, à quelques kilomètres du gîte.
+Le gîte L'Étable est le premier des deux gîtes (avec le Verger) que nous avons entièrement créé. Parti de l'étable de la ferme, nous l'avons tout d'abord entièrement vidée pour la rénover avec l'idée d'y faire un vrai cocon douillet en préservant au maximum l'identité du lieu. C'est ainsi que se côtoient la mangeoire en pierre, les vieux pavés, les poutres apparentes ou encore l'escalier que nous avons créé avec de vieilles planches, l'électroménager haut de gamme, et la literie de grande qualité fabriquée en Charente Maritime, à quelques kilomètres du gîte.
 
 La cuisine, entièrement équipée avec son authentique billot de boucherie vous permettra de cuisiner selon vos envies. Le salon contigu, vous incitera au farniente, assis sur la mangeoire, équipée d'un confortable coussin, ou sur le canapé. Vous apprécierez d'autant plus cette pièce en rez de jardin l'été pour la fraîcheur qu'offrent les murs épais.
 
