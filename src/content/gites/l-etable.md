@@ -1,7 +1,7 @@
 ---
 id: 1
 slug: l-etable
-nom: L'étable
+nom: L'Étable
 description_courte: Le charme des pierres et du bois dans cette authentique étable.
 price: 130€ / nuit
 capacity: 4
