@@ -1,7 +1,7 @@
 ---
 id: 3
 slug: le-marronnier
-nom: Le marronnier
+nom: Le Marronnier
 description_courte: Quiétude et nature.
 price: 110€ / nuit
 capacity: 5
