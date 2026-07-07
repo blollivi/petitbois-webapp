@@ -11,7 +11,7 @@ gallery:
   - /photos/le-verger/ch 2 lits.jpg
   - /photos/le-verger/cuisine.jpg
   - /photos/le-verger/espace enfant.jpg
-  - /photos/le-verger/terrasse.jpg
+  - /photos/terrasse1.jpeg
 amenities:
   - Poêle à pellets
   - Mezzanine
