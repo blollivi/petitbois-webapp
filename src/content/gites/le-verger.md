@@ -46,4 +46,4 @@ Enfin la terrasse, à l'ombre d'un grand érable, et son barbecue vous permettro
 
 Sur demande, un lit bébé, une chaise haute, et un matelas à langer peuvent vous être fournis gracieusement.
 
-A noter que le gîte donne accès à une prise GREEN UP pour recharger les véhicules électriques.
+A noter que le gîte est doté d'une prise GREEN UP pour recharger les véhicules électriques.
