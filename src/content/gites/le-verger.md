@@ -1,6 +1,6 @@
 ---
 id: 2
-slug: le-verger
+slug: le Verger
 nom: Le Verger
 description_courte: Lumière et volume, maîtres mots du gîte.
 price: à partir de 90€ / nuit
