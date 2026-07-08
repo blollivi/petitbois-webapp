@@ -12,6 +12,7 @@ gallery:
   - /photos/le-verger/cuisine.jpg
   - /photos/le-verger/espace enfant.jpg
   - /photos/terrasse1.jpeg
+  - /photos/accès-route.jpg
 amenities:
   - Poêle à pellets
   - Mezzanine
