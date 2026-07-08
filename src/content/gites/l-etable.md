@@ -1,6 +1,6 @@
 ---
 id: 1
-slug: l-etable
+slug: L'Étable
 nom: L'Étable
 description_courte: Le charme des pierres et du bois dans cette authentique étable.
 price: à partir de 90€ / nuit
