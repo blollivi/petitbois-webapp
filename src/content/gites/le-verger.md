@@ -8,10 +8,17 @@ capacity: 6
 image: /photos/terrasse1.jpeg
 gallery:
   - /photos/le-verger/ch 1 lit - 3.jpg
+  - /photos/ch-1-lit-2.jpg
   - /photos/le-verger/ch 2 lits.jpg
   - /photos/le-verger/cuisine.jpg
   - /photos/le-verger/espace enfant.jpg
   - /photos/terrasse1.jpeg
+  - /photos/cuisine-1.jpg
+  - /photos/salle-d-eau-1.jpg
+  - /photos/salle-d-eau.jpg
+  - /photos/coin-salon.jpg
+  - /photos/espace-enfant.jpg
+  - /photos/vue-mezzanine.jpg
   - /photos/accès-route.jpg
 amenities:
   - Poêle à pellets
