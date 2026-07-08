@@ -1,6 +1,6 @@
 ---
 id: 3
-slug: le-marronnier
+slug: le Marronnier
 nom: Le Marronnier
 description_courte: Quiétude et nature.
 price: à partir de 90€ / nuit
@@ -9,14 +9,14 @@ image: /photos/le-marronnier/facade.jpg
 gallery:
   - /photos/le-marronnier/ch 1.jpg
   - /photos/le-marronnier/facade.jpg
+  - /photos/cuisine.jpg
   - /photos/le-marronnier/salon1.jpg
   - /photos/le-marronnier/sdb.jpg
+  - /photos/douche.jpg
   - /photos/le-marronnier/transats.jpg
-  - /photos/douche.jpg
   - /photos/balançoire.jpg
-  - /photos/cuisine.jpg
-  - /photos/douche.jpg
   - /photos/table-enfant.jpg
+  - /photos/bbq.jpg
 amenities:
   - Climatisation
   - Grand Jardin
