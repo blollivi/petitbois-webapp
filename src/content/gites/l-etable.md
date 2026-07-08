@@ -3,18 +3,21 @@ id: 1
 slug: l-etable
 nom: L'Étable
 description_courte: Le charme des pierres et du bois dans cette authentique étable.
-price: 130€ / nuit
+price: 90€ / nuit
 capacity: 4
 image: /photos/l-etable/IMG_6108.jpg
 gallery:
   - /photos/l-etable/Cuisine équipée.jpg
   - /photos/l-etable/IMG_6108.jpg
   - /photos/l-etable/La douche.jpg
-  - /photos/l-etable/La palier.jpg
   - /photos/l-etable/Le plan lavabo.jpg
+  - /photos/l-etable/La palier.jpg
   - /photos/l-etable/Le séjour.jpg
   - /photos/l-etable/chambre 1 lit.jpg
   - /photos/l-etable/chambre 2 lits.jpg
+  - /photos/chambre-1-lit-3.jpg
+  - /photos/le-palier-1.jpg
+  - /photos/sdb-1.jpg
 amenities:
   - Climatisation
   - Prise Green Up
