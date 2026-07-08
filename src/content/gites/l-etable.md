@@ -9,15 +9,17 @@ image: /photos/l-etable/IMG_6108.jpg
 gallery:
   - /photos/l-etable/IMG_6108.jpg
   - /photos/l-etable/Cuisine équipée.jpg
+  - /photos/img_5492.jpg
+  - /photos/l-etable/Le séjour.jpg
   - /photos/l-etable/La douche.jpg
   - /photos/l-etable/Le plan lavabo.jpg
-  - /photos/l-etable/La palier.jpg
-  - /photos/l-etable/Le séjour.jpg
   - /photos/l-etable/chambre 1 lit.jpg
+  - /photos/chambre-1-lit-2.jpg
   - /photos/l-etable/chambre 2 lits.jpg
-  - /photos/chambre-1-lit-3.jpg
+  - /photos/chambre-2-lits-1.jpg
   - /photos/le-palier-1.jpg
-  - /photos/sdb-1.jpg
+  - /photos/le-palier.jpg
+  - /photos/accès-route.jpg
 amenities:
   - Climatisation
   - Prise Green Up
@@ -38,6 +40,6 @@ Enfin, la terrasse avec plancha et le jardin privatif clos et arboré finiront d
 
 Sur demande, un lit bébé, une chaise haute et un matelas à langer peuvent vous être fournis gracieusement.
 
-A noter que le gîte donne accès à une prise GREEN UP pour recharger les véhicules électriques.
+A noter que le gîte est doté d'une prise GREEN UP pour recharger les véhicules électriques.
 
 A très bientôt pour un séjour enchanteur.
